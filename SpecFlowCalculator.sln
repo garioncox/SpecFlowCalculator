@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowCalculator", "SpecFlowCalculator\SpecFlowCalculator.csproj", "{3FBA2CAA-6A21-48F5-BBA9-1AA868A55096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowCalculator.Specs", "SpecFlowCalculator.Specs\SpecFlowCalculator.Specs.csproj", "{51904CE5-44E7-4702-AD12-1713709B3049}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FBA2CAA-6A21-48F5-BBA9-1AA868A55096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBA2CAA-6A21-48F5-BBA9-1AA868A55096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBA2CAA-6A21-48F5-BBA9-1AA868A55096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBA2CAA-6A21-48F5-BBA9-1AA868A55096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51904CE5-44E7-4702-AD12-1713709B3049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51904CE5-44E7-4702-AD12-1713709B3049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51904CE5-44E7-4702-AD12-1713709B3049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51904CE5-44E7-4702-AD12-1713709B3049}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14E60E44-9B2E-4EA6-BF9B-D48009B5A3AA}
+	EndGlobalSection
+EndGlobal
