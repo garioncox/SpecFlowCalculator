@@ -5,6 +5,7 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
     public sealed class CalculatorStepDefinitions
     {
         private readonly Calculator _calculator = new Calculator();
+        private int _result;
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
         [Given("the first number is (.*)")]
@@ -19,8 +20,6 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
             _calculator.SecondNumber = number;
         }
 
-        private int _result;
-
         [When("the two numbers are added")]
         public void WhenTheTwoNumbersAreAdded()
         {
@@ -32,5 +31,51 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
         {
             _result.Should().Be(result);
         }
+
+        [When("the two numbers are subtracted")]
+        public void WhenTwoNumbersAreSubtracted()
+        {
+            _result = _calculator.Subtract();
+        }
+
+        [When("the two numbers are multiplied")]
+        public void WhenTwoNumbersAreMultiplied()
+        {
+            _result = _calculator.Multiply();
+        }
+
+        [When(@"operation \+ is done to the number (.*)")]
+        public void WhenAddOperationIsDoneToTheNumber(int p0)
+        {
+            _calculator.SecondNumber = p0;
+            _calculator.FirstNumber = _calculator.Add();
+            _result = _calculator.FirstNumber;
+        }
+
+
+        [When(@"operation - is done to the number (.*)")]
+        public void WhenSubtractOperation_IsDoneToTheNumber(int p0)
+        {
+            _calculator.SecondNumber = p0;
+            _calculator.FirstNumber = _calculator.Subtract();
+            _result = _calculator.FirstNumber;
+        }
+
+        [When(@"operation % is done to the number (.*)")]
+        public void WhenModOperationIsDoneToTheNumber(int p0)
+        {
+            _calculator.SecondNumber = p0;
+            _calculator.FirstNumber = _calculator.Modulus();
+            _result = _calculator.FirstNumber;
+        }
+
+        [When(@"operation / is done to the number (.*)")]
+        public void WhenOperationIsDoneToTheNumber(int p0)
+        {
+            _calculator.SecondNumber = p0;
+            _calculator.FirstNumber = _calculator.Divide();
+            _result = _calculator.FirstNumber;
+        }
+
     }
 }
